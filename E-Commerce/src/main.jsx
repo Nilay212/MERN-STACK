@@ -6,8 +6,10 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Register from "./pages/Register";
+import Login from "./pages/Login";
 import Privacy from "./pages/Privacy";
+import PageNotFound from "./pages/PageNotFound";
+import Register from "./pages/Register";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +29,19 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: "register",
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "privacy",
+        element: <Privacy />,
+      },
+      {
+        path: "*",
+        element: <PageNotFound />,
+      },
+      {
+        path: "/register",
         element: <Register />,
       },
     ],
